@@ -1,11 +1,11 @@
 #!/bin/bash
 #####################################################
-## Deluge BitTorrent Daemon & Web-UI Installer     ##
-## v.1.3.6  -  02/06/2014                          ##
+## Deluge BitTorrent Daemon & We ##
+## v.1.3.13  -  2016-07-2                          ##
 ## nunim at sonicboxes.com                         ##
 #####################################################
 ## setup variables ##
-latest="http://download.deluge-torrent.org/source/deluge-1.3.12.tar.gz"
+latest="http://download.deluge-torrent.org/source/deluge-1.3.13.tar.gz"
 geoip="http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz"
 packages="python python-twisted python-twisted-web python-openssl python-simplejson python-setuptools intltool python-xdg python-chardet geoip-database python-libtorrent python-notify python-pygame python-glade2 librsvg2-common xdg-utils python-mako"
 ip=$(hostname -I | awk -F ' ' '{print $2}')
@@ -253,7 +253,7 @@ echo "If all went as planned you should be able to access"
 echo "the deluge web-ui at http://$ip:8112/ "
 echo "         Default password = deluge"
 echo "#####################################################"
-echo "##########   Installer by SonicBoxes.com   ##########"
+echo "##  Installer by SonicBoxes.com modified by maulvi ##"
 echo "#####################################################"
 echo "For FAQ and configuration options please see:"
 echo "http://sonicboxes.com/bittorrent-deluge-webui-install-script/"
