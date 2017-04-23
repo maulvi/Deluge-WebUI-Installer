@@ -1,11 +1,11 @@
 #!/bin/bash
 #####################################################
-## Deluge BitTorrent Daemon & We ##
-## v.1.3.13  -  2016-07-2                          ##
-## nunim at sonicboxes.com                         ##
+##            Deluge BitTorrent Daemon             ##
+##             v.1.3.14  -  2016-07-2              ##
+##                                                 ##
 #####################################################
 ## setup variables ##
-latest="http://download.deluge-torrent.org/source/deluge-1.3.13.tar.gz"
+latest="http://download.deluge-torrent.org/source/deluge-1.3.14.tar.gz"
 geoip="http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz"
 packages="python python-twisted python-twisted-web python-openssl python-simplejson python-setuptools intltool python-xdg python-chardet geoip-database python-libtorrent python-notify python-pygame python-glade2 librsvg2-common xdg-utils python-mako"
 ip=$(hostname -I | awk -F ' ' '{print $2}')
