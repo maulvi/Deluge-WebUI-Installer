@@ -5,9 +5,9 @@
 ##                                                 ##
 #####################################################
 ## setup variables ##
-latest="http://download.deluge-torrent.org/source/deluge-1.3.14.tar.gz"
+latest="http://download.deluge-torrent.org/source/deluge-1.3.15.tar.gz"
 geoip="http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz"
-packages="python python-twisted python-twisted-web python-openssl python-simplejson python-setuptools intltool python-xdg python-chardet geoip-database python-libtorrent python-notify python-pygame python-glade2 librsvg2-common xdg-utils python-mako"
+packages="curl python python-twisted python-twisted-web python-openssl python-simplejson python-setuptools intltool python-xdg python-chardet geoip-database python-libtorrent python-notify python-pygame python-glade2 librsvg2-common xdg-utils python-mako"
 ip=$(hostname -I | awk -F ' ' '{print $2}')
 # Check if we're root
 if [ $(whoami) != "root" ]; then
