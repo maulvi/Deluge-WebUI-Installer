@@ -1,12 +1,13 @@
 #!/bin/bash
 #####################################################
 ##            Deluge BitTorrent Daemon             ##
-##             v.1.3.14  -  2016-07-2              ##
+##                    v.1.3.15                     ##
 ##                                                 ##
 #####################################################
 ## setup variables ##
 latest="http://download.deluge-torrent.org/source/deluge-1.3.15.tar.gz"
-geoip="http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz"
+#geoip="http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz"
+geoip="https://github.com/mbcc2006/GeoLiteCity-data/raw/master/GeoLiteCity.dat"
 packages="curl python python-twisted python-twisted-web python-openssl python-simplejson python-setuptools intltool python-xdg python-chardet geoip-database python-libtorrent python-notify python-pygame python-glade2 librsvg2-common xdg-utils python-mako"
 ip=$(hostname -I | awk -F ' ' '{print $2}')
 # Check if we're root
@@ -43,7 +44,7 @@ echo "Installing Dependencies....."
 ## install geoip database to resolve ips ##
 	echo " Installing GeoIP Database...."
 	wget $geoip
-	gzip -d GeoIP.dat.gz
+#	gzip -d GeoIP.dat.gz
 	mkdir -p /usr/share/geoip
 	mv GeoIP.dat /usr/share/geoip/
 
