@@ -7,8 +7,8 @@
 ## setup variables ##
 latest="http://download.deluge-torrent.org/source/deluge-1.3.15.tar.gz"
 #geoip="http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz"
-geoip="https://github.com/mbcc2006/GeoLiteCity-data/raw/master/GeoLiteCity.dat"
-packages="curl python python-twisted python-twisted-web python-openssl python-simplejson python-setuptools intltool python-xdg python-chardet geoip-database python-libtorrent python-notify python-pygame python-glade2 librsvg2-common xdg-utils python-mako"
+geoip="https://github.com/maulvi/Deluge-WebUI-Installer/raw/master/GeoIP.zip"
+packages="curl unzip python python-twisted python-twisted-web python-openssl python-simplejson python-setuptools intltool python-xdg python-chardet geoip-database python-libtorrent python-notify python-pygame python-glade2 librsvg2-common xdg-utils python-mako"
 ip=$(hostname -I | awk -F ' ' '{print $2}')
 # Check if we're root
 if [ $(whoami) != "root" ]; then
@@ -44,9 +44,9 @@ echo "Installing Dependencies....."
 ## install geoip database to resolve ips ##
 	echo " Installing GeoIP Database...."
 	wget $geoip
-#	gzip -d GeoIP.dat.gz
+	unzip GeoIP.zip
 	mkdir -p /usr/share/geoip
-	mv GeoIP.dat /usr/share/geoip/
+	mv GeoIP/GeoIP.dat /usr/share/geoip/
 
 ## setup deluge user
 	echo "Now we will setup a user for Deluge"
