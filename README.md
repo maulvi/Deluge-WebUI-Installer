@@ -1,6 +1,8 @@
 # Deluge WebUI Installer script
 
-For Debian 7/8 and Ubuntu Based environment
+For Debian 7/8 and Ubuntu 12/14/16 Based environment
+
+-tested with 18 but daemon service won't start
 
 This script install the latest version available
 ```
